@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <style>
+    /* p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+} */
+    .room {
+      width: 300px;
+     /* height: 300px; */
+      /* padding : 2% */
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+
+    .on {
+      background-color: #008CBA;
+      height: 30px;
+      width: 100px;
+    }
+
+    .off {
+      background-color: #f44336;
+      height: 30px;
+      width: 100px;
+    }
+
+    #table {
+      text-align: center;
+      margin-left: 30%;
+      margin-top: 5%;
+
+
+    }
+
+    #allrooms {
+      text-align: center;
+      margin-left: 85%;
+    }
+    #theImg{
+      height: 200px;
+      width: auto;
+      margin-bottom: 5%;
+    }
+    #logout{
+      margin-left: 90%;
+      width: 70px;
+      background-color: #8f9eb5;
+      height: 50px;;
+    }
+  </style>
+</head>
+
+<body>
+    <p>
+        <a href="login.html" class="btn btn-info btn-lg">
+         <button id = "logout">Log out</button> 
+        </a>
+      </p> 
+      <hr>
+  <table id="table">
+
+    <tr>
+      <td id="allrooms" class="room">
+          <div class="card">
+        <div class="container">
+          <h4><b>All Rooms</b></h4>
+          <p id="countRoom1" style=" display : none"> </p>
+        </div>
+        <button class="on" id="on">On</button>
+        <button class="off" id = "off">Off</button>
+        <h5 id="demo"> </h5>
+        <br><br><br>
+        </div>
+      </td>
+      <td>
+        <div id="image">
+          <img id="theImg" src="http://www.qchabad.org/wp-content/uploads/2011/02/Lightbulb.jpg" alt="">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td id="room1" class="room">
+        <div class="card">
+          <div class="container">
+            <h4><b>ROOM 1</b></h4>
+            <p id="countRoom1" style=" display : none"> </p>
+          </div>
+          <button class="on" id="on1">On</button>
+          <button class="off" id = "off1">Off</button>
+          <h5 id="demo1"> </h5>
+          <br>
+          <br>
+          <br>
+        </div>
+      </td>
+      <td id="room2" class="room">
+        <div class="card">
+          <div class="container">
+            <h4><b>ROOM 2</b></h4>
+            <p id="countRoom2" style=" display : none"> </p>
+          </div>
+          <button class="on" id="on2">On</button>
+          <button class="off" id = "off2">Off</button>
+          <h5 id="demo2" style="display: none;"> </h5>
+          <br>
+          <br>
+          <br>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p id="demo"></p>
+</body>
+<script src="scripts/browserMqtt.js"></script>
+<script src="scripts/controller.js"></script>
+</html>
